@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Help me OCR my PDF";
+
+/* Bundle name */
+"CFBundleName" = "GUI4OCRMyPDF";
+

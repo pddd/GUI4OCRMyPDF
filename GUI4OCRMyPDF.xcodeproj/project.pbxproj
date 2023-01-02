@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A517063629645B3C004FF552 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517063529645B3C004FF552 /* SettingsView.swift */; };
+		A5AAB2FE2961A0BC00248F77 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB2FD2961A0BC00248F77 /* Header.swift */; };
+		A5AAB3002961A8C600248F77 /* RunningCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB2FF2961A8C600248F77 /* RunningCircle.swift */; };
+		A5AAB3022961C1EE00248F77 /* OCRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB3012961C1EE00248F77 /* OCRButton.swift */; };
+		A5AAB30429622BBE00248F77 /* OCRTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB30329622BBE00248F77 /* OCRTask.swift */; };
+		A5AD95C02949E7670066D90A /* GUI4OCRMyPDFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95BF2949E7670066D90A /* GUI4OCRMyPDFApp.swift */; };
+		A5AD95C22949E7670066D90A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95C12949E7670066D90A /* ContentView.swift */; };
+		A5AD95C82949E7680066D90A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AD95C72949E7680066D90A /* Preview Assets.xcassets */; };
+		A5AD95D22949E7680066D90A /* GUI4OCRMyPDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95D12949E7680066D90A /* GUI4OCRMyPDFTests.swift */; };
+		A5AD95DC2949E7680066D90A /* GUI4OCRMyPDFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95DB2949E7680066D90A /* GUI4OCRMyPDFUITests.swift */; };
+		A5AD95DE2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95DD2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift */; };
+		A5C0657129659C090066ACE5 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657029659C090066ACE5 /* Collections */; };
+		A5C0657329659C090066ACE5 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657229659C090066ACE5 /* DequeModule */; };
+		A5C0657529659C090066ACE5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657429659C090066ACE5 /* OrderedCollections */; };
+		A5C5B239294E07C6005F0FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C5B238294E07C6005F0FD7 /* Assets.xcassets */; };
+		A5C5B23E294FB622005F0FD7 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B23D294FB622005F0FD7 /* Shell.swift */; };
+		A5C5B24929520BE3005F0FD7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C5B24729520BE3005F0FD7 /* InfoPlist.strings */; };
+		A5C5B24C29520BE3005F0FD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C5B24A29520BE3005F0FD7 /* Localizable.strings */; };
+		A5C5B24E29545DC4005F0FD7 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B24D29545DC4005F0FD7 /* MultiSelectionView.swift */; };
+		A5C5B25029545E1F005F0FD7 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B24F29545E1F005F0FD7 /* MultiSelector.swift */; };
+		A5C5B2522954667C005F0FD7 /* OCRLanguageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B2512954667C005F0FD7 /* OCRLanguageOptions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5AD95CE2949E7680066D90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AD95B42949E7670066D90A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AD95BB2949E7670066D90A;
+			remoteInfo = GUI4OCRMyPDF;
+		};
+		A5AD95D82949E7680066D90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AD95B42949E7670066D90A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AD95BB2949E7670066D90A;
+			remoteInfo = GUI4OCRMyPDF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A517063529645B3C004FF552 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A58DCA3029671F1500C29D8D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A5AAB2FD2961A0BC00248F77 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		A5AAB2FF2961A8C600248F77 /* RunningCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningCircle.swift; sourceTree = "<group>"; };
+		A5AAB3012961C1EE00248F77 /* OCRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRButton.swift; sourceTree = "<group>"; };
+		A5AAB30329622BBE00248F77 /* OCRTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRTask.swift; sourceTree = "<group>"; };
+		A5AD95BC2949E7670066D90A /* GUI4OCRMyPDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUI4OCRMyPDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD95BF2949E7670066D90A /* GUI4OCRMyPDFApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUI4OCRMyPDFApp.swift; sourceTree = "<group>"; };
+		A5AD95C12949E7670066D90A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A5AD95C52949E7680066D90A /* GUI4OCRMyPDF.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GUI4OCRMyPDF.entitlements; sourceTree = "<group>"; };
+		A5AD95C72949E7680066D90A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5AD95CD2949E7680066D90A /* GUI4OCRMyPDFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUI4OCRMyPDFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD95D12949E7680066D90A /* GUI4OCRMyPDFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUI4OCRMyPDFTests.swift; sourceTree = "<group>"; };
+		A5AD95D72949E7680066D90A /* GUI4OCRMyPDFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUI4OCRMyPDFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AD95DB2949E7680066D90A /* GUI4OCRMyPDFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUI4OCRMyPDFUITests.swift; sourceTree = "<group>"; };
+		A5AD95DD2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUI4OCRMyPDFUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A5C5B233294C48B1005F0FD7 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		A5C5B234294C567F005F0FD7 /* Working Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Working Assets"; sourceTree = "<group>"; };
+		A5C5B237294C8F11005F0FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A5C5B238294E07C6005F0FD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5C5B23D294FB622005F0FD7 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		A5C5B24829520BE3005F0FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5C5B24B29520BE3005F0FD7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5C5B24D29545DC4005F0FD7 /* MultiSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		A5C5B24F29545E1F005F0FD7 /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
+		A5C5B2512954667C005F0FD7 /* OCRLanguageOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRLanguageOptions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5AD95B92949E7670066D90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C0657129659C090066ACE5 /* Collections in Frameworks */,
+				A5C0657329659C090066ACE5 /* DequeModule in Frameworks */,
+				A5C0657529659C090066ACE5 /* OrderedCollections in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95CA2949E7680066D90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95D42949E7680066D90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5AAB2FA29603F3300248F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5AD95B32949E7670066D90A = {
+			isa = PBXGroup;
+			children = (
+				A58DCA3029671F1500C29D8D /* .gitignore */,
+				A5C5B234294C567F005F0FD7 /* Working Assets */,
+				A5C5B233294C48B1005F0FD7 /* readme.md */,
+				A5AD95BE2949E7670066D90A /* GUI4OCRMyPDF */,
+				A5AD95D02949E7680066D90A /* GUI4OCRMyPDFTests */,
+				A5AD95DA2949E7680066D90A /* GUI4OCRMyPDFUITests */,
+				A5AD95BD2949E7670066D90A /* Products */,
+				A5AAB2FA29603F3300248F77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A5AD95BD2949E7670066D90A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD95BC2949E7670066D90A /* GUI4OCRMyPDF.app */,
+				A5AD95CD2949E7680066D90A /* GUI4OCRMyPDFTests.xctest */,
+				A5AD95D72949E7680066D90A /* GUI4OCRMyPDFUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5AD95BE2949E7670066D90A /* GUI4OCRMyPDF */ = {
+			isa = PBXGroup;
+			children = (
+				A5C5B238294E07C6005F0FD7 /* Assets.xcassets */,
+				A5C5B237294C8F11005F0FD7 /* Info.plist */,
+				A5C5B24A29520BE3005F0FD7 /* Localizable.strings */,
+				A5C5B24729520BE3005F0FD7 /* InfoPlist.strings */,
+				A5AD95BF2949E7670066D90A /* GUI4OCRMyPDFApp.swift */,
+				A5AD95C12949E7670066D90A /* ContentView.swift */,
+				A5AD95C52949E7680066D90A /* GUI4OCRMyPDF.entitlements */,
+				A5AD95C62949E7680066D90A /* Preview Content */,
+				A5C5B23D294FB622005F0FD7 /* Shell.swift */,
+				A5C5B24D29545DC4005F0FD7 /* MultiSelectionView.swift */,
+				A5C5B24F29545E1F005F0FD7 /* MultiSelector.swift */,
+				A5C5B2512954667C005F0FD7 /* OCRLanguageOptions.swift */,
+				A5AAB2FD2961A0BC00248F77 /* Header.swift */,
+				A5AAB2FF2961A8C600248F77 /* RunningCircle.swift */,
+				A5AAB3012961C1EE00248F77 /* OCRButton.swift */,
+				A5AAB30329622BBE00248F77 /* OCRTask.swift */,
+				A517063529645B3C004FF552 /* SettingsView.swift */,
+			);
+			path = GUI4OCRMyPDF;
+			sourceTree = "<group>";
+		};
+		A5AD95C62949E7680066D90A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD95C72949E7680066D90A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5AD95D02949E7680066D90A /* GUI4OCRMyPDFTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD95D12949E7680066D90A /* GUI4OCRMyPDFTests.swift */,
+			);
+			path = GUI4OCRMyPDFTests;
+			sourceTree = "<group>";
+		};
+		A5AD95DA2949E7680066D90A /* GUI4OCRMyPDFUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5AD95DB2949E7680066D90A /* GUI4OCRMyPDFUITests.swift */,
+				A5AD95DD2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift */,
+			);
+			path = GUI4OCRMyPDFUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5AD95BB2949E7670066D90A /* GUI4OCRMyPDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD95E12949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDF" */;
+			buildPhases = (
+				A5AD95B82949E7670066D90A /* Sources */,
+				A5AD95B92949E7670066D90A /* Frameworks */,
+				A5AD95BA2949E7670066D90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GUI4OCRMyPDF;
+			packageProductDependencies = (
+				A5C0657029659C090066ACE5 /* Collections */,
+				A5C0657229659C090066ACE5 /* DequeModule */,
+				A5C0657429659C090066ACE5 /* OrderedCollections */,
+			);
+			productName = GUI4OCRMyPDF;
+			productReference = A5AD95BC2949E7670066D90A /* GUI4OCRMyPDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5AD95CC2949E7680066D90A /* GUI4OCRMyPDFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD95E42949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDFTests" */;
+			buildPhases = (
+				A5AD95C92949E7680066D90A /* Sources */,
+				A5AD95CA2949E7680066D90A /* Frameworks */,
+				A5AD95CB2949E7680066D90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5AD95CF2949E7680066D90A /* PBXTargetDependency */,
+			);
+			name = GUI4OCRMyPDFTests;
+			productName = GUI4OCRMyPDFTests;
+			productReference = A5AD95CD2949E7680066D90A /* GUI4OCRMyPDFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5AD95D62949E7680066D90A /* GUI4OCRMyPDFUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AD95E72949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDFUITests" */;
+			buildPhases = (
+				A5AD95D32949E7680066D90A /* Sources */,
+				A5AD95D42949E7680066D90A /* Frameworks */,
+				A5AD95D52949E7680066D90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5AD95D92949E7680066D90A /* PBXTargetDependency */,
+			);
+			name = GUI4OCRMyPDFUITests;
+			productName = GUI4OCRMyPDFUITests;
+			productReference = A5AD95D72949E7680066D90A /* GUI4OCRMyPDFUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5AD95B42949E7670066D90A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A5AD95BB2949E7670066D90A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A5AD95CC2949E7680066D90A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A5AD95BB2949E7670066D90A;
+					};
+					A5AD95D62949E7680066D90A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A5AD95BB2949E7670066D90A;
+					};
+				};
+			};
+			buildConfigurationList = A5AD95B72949E7670066D90A /* Build configuration list for PBXProject "GUI4OCRMyPDF" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = A5AD95B32949E7670066D90A;
+			packageReferences = (
+				A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
+			productRefGroup = A5AD95BD2949E7670066D90A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5AD95BB2949E7670066D90A /* GUI4OCRMyPDF */,
+				A5AD95CC2949E7680066D90A /* GUI4OCRMyPDFTests */,
+				A5AD95D62949E7680066D90A /* GUI4OCRMyPDFUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5AD95BA2949E7670066D90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C5B24C29520BE3005F0FD7 /* Localizable.strings in Resources */,
+				A5C5B239294E07C6005F0FD7 /* Assets.xcassets in Resources */,
+				A5C5B24929520BE3005F0FD7 /* InfoPlist.strings in Resources */,
+				A5AD95C82949E7680066D90A /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95CB2949E7680066D90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95D52949E7680066D90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5AD95B82949E7670066D90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C5B23E294FB622005F0FD7 /* Shell.swift in Sources */,
+				A5AAB3002961A8C600248F77 /* RunningCircle.swift in Sources */,
+				A5C5B25029545E1F005F0FD7 /* MultiSelector.swift in Sources */,
+				A5AD95C22949E7670066D90A /* ContentView.swift in Sources */,
+				A5AAB2FE2961A0BC00248F77 /* Header.swift in Sources */,
+				A5AAB30429622BBE00248F77 /* OCRTask.swift in Sources */,
+				A5AAB3022961C1EE00248F77 /* OCRButton.swift in Sources */,
+				A5AD95C02949E7670066D90A /* GUI4OCRMyPDFApp.swift in Sources */,
+				A5C5B24E29545DC4005F0FD7 /* MultiSelectionView.swift in Sources */,
+				A5C5B2522954667C005F0FD7 /* OCRLanguageOptions.swift in Sources */,
+				A517063629645B3C004FF552 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95C92949E7680066D90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD95D22949E7680066D90A /* GUI4OCRMyPDFTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AD95D32949E7680066D90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AD95DC2949E7680066D90A /* GUI4OCRMyPDFUITests.swift in Sources */,
+				A5AD95DE2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5AD95CF2949E7680066D90A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AD95BB2949E7670066D90A /* GUI4OCRMyPDF */;
+			targetProxy = A5AD95CE2949E7680066D90A /* PBXContainerItemProxy */;
+		};
+		A5AD95D92949E7680066D90A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AD95BB2949E7670066D90A /* GUI4OCRMyPDF */;
+			targetProxy = A5AD95D82949E7680066D90A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5C5B24729520BE3005F0FD7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C5B24829520BE3005F0FD7 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A5C5B24A29520BE3005F0FD7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C5B24B29520BE3005F0FD7 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5AD95DF2949E7680066D90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5AD95E02949E7680066D90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A5AD95E22949E7680066D90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GUI4OCRMyPDF/GUI4OCRMyPDF.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GUI4OCRMyPDF/Preview Content\"";
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GUI4OCRMyPDF/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Help Me to OCR my PDF";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A5AD95E32949E7680066D90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = GUI4OCRMyPDF/GUI4OCRMyPDF.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GUI4OCRMyPDF/Preview Content\"";
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GUI4OCRMyPDF/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Help Me to OCR my PDF";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A5AD95E52949E7680066D90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUI4OCRMyPDF.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GUI4OCRMyPDF";
+			};
+			name = Debug;
+		};
+		A5AD95E62949E7680066D90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GUI4OCRMyPDF.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GUI4OCRMyPDF";
+			};
+			name = Release;
+		};
+		A5AD95E82949E7680066D90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GUI4OCRMyPDF;
+			};
+			name = Debug;
+		};
+		A5AD95E92949E7680066D90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4T8C3J686S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dul.GUI4OCRMyPDFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GUI4OCRMyPDF;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5AD95B72949E7670066D90A /* Build configuration list for PBXProject "GUI4OCRMyPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD95DF2949E7680066D90A /* Debug */,
+				A5AD95E02949E7680066D90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A5AD95E12949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD95E22949E7680066D90A /* Debug */,
+				A5AD95E32949E7680066D90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A5AD95E42949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD95E52949E7680066D90A /* Debug */,
+				A5AD95E62949E7680066D90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A5AD95E72949E7680066D90A /* Build configuration list for PBXNativeTarget "GUI4OCRMyPDFUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AD95E82949E7680066D90A /* Debug */,
+				A5AD95E92949E7680066D90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5C0657029659C090066ACE5 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		A5C0657229659C090066ACE5 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		A5C0657429659C090066ACE5 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A5AD95B42949E7670066D90A /* Project object */;
+}

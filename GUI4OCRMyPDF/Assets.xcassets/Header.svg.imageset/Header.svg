@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 400 100" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="265.05" id="Filter" width="925.912" x="-307.679" y="-163.497">
+<feDropShadow dx="-3.67321e-05" dy="10" flood-color="#000000" flood-opacity="0.333" in="SourceGraphic" result="Shadow" stdDeviation="5"/>
+</filter>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="100" width="400" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Ebene-1">
+<path d="M-297.679-40.9718C-297.679-108.641-94.8839-163.497 155.277-163.497C405.437-163.497 608.233-108.641 608.233-40.9718C608.233 26.697 405.437 81.5534 155.277 81.5534C-94.8839 81.5534-297.679 26.697-297.679-40.9718Z" fill="#3e68ff" fill-rule="nonzero" filter="url(#Filter)" stroke="none"/>
+</g>
+</svg>
