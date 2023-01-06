@@ -28,26 +28,16 @@ class OCRTask: ObservableObject, DropDelegate {
     func selectFileAndRunOcrTask() {
         lockedSettings = true
         let pdfSourceUrl = self.selectPDF()
-        Task {
-            withAnimation {
-                isRunning = true
-            }
-            await runOcr(pdfSourceUrl: pdfSourceUrl)
-            //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
-            
-            withAnimation {
-                isRunning = false
-                lockedSettings = false
-            }
-        }
+        runOcrTask(withPdfSource: pdfSourceUrl)
     }
     
-    private func runOcrTask(withDropedPdfSource: URL?) {
+    func runOcrTask(withPdfSource: URL?) {
         Task {
             withAnimation {
+                lockedSettings = true
                 isRunning = true
             }
-            await runOcr(pdfSourceUrl: withDropedPdfSource)
+            await runOcr(pdfSourceUrl: withPdfSource)
             //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
             
             withAnimation {
@@ -158,6 +148,7 @@ class OCRTask: ObservableObject, DropDelegate {
         _ = items.first?.loadFileRepresentation(for: UTType.pdf, openInPlace: true) { [self] withDropedPdfSource,success,error in
             Task { @MainActor in
                 withAnimation {
+                    lockedSettings = true
                     isRunning = true
                 }
                 await runOcr(pdfSourceUrl: withDropedPdfSource)

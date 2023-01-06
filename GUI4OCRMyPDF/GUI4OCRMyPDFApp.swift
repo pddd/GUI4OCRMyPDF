@@ -18,8 +18,9 @@ struct GUI4OCRMyPDFApp: App {
                 Header()
                 ContentView(ocrTask: ocrTask)
             }
-            .frame(minWidth: 410, idealWidth: 450, maxWidth: .infinity, minHeight: 500, idealHeight: 500, maxHeight: .infinity, alignment: .top)
+            .frame(minWidth: 410, idealWidth: 450, maxWidth: .infinity, minHeight: 530, idealHeight: 550, maxHeight: .infinity, alignment: .top)
             .onDrop(of: [UTType.pdf], delegate: ocrTask)
+            .onOpenURL(perform: {dropedPdf in ocrTask.runOcrTask(withPdfSource: dropedPdf)})
         }
         
         #if os(macOS)
