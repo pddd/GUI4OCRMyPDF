@@ -9,11 +9,10 @@ import SwiftUI
 import Foundation
 import Combine
 
-
 struct ContentView: View {
 
+    @ObservedObject var ocrTask: OCRTask
     @State private var taskOutput = ""
-    @StateObject private var ocrTask = OCRTask()
     @State private var expandedResult = false
     
     
@@ -30,12 +29,11 @@ struct ContentView: View {
                 Label("OCR Settings", systemImage: settingsIcon)
             ) {
                 GeneralSettingsView()
-            }.disabled(ocrTask.locked)
+            }.disabled(ocrTask.lockedSettings)
             
             DisclosureGroup("Output", isExpanded: $expandedResult) {
                 ScrollViewReader { scrollView in
                    ScrollView {
-                       
                         Text(ocrTask.output).id("Result Text")
                             .onReceive(ocrTask.$output) { output in
                                 //taskOutput = output
@@ -60,20 +58,21 @@ struct ContentView: View {
                     }.id("Result File Buttons")
                 }
             }
-            
         }
         .padding()
         .frame(alignment: .top)
     }
-    
 }
+                         
 
 struct ContentView_Previews: PreviewProvider {
+    @StateObject static var ocrTask = OCRTask()
+    
     static var previews: some View {
         
         VStack() {
             Header()
-            ContentView()
+            ContentView(ocrTask: ocrTask)
         }.frame(minWidth: 400, idealWidth: 400, maxWidth: .infinity, minHeight: 330, idealHeight: 330, maxHeight: .infinity, alignment: .top)
             .environment(\.sizeCategory, .medium)
             .previewInterfaceOrientation(.landscapeLeft)

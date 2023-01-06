@@ -14,34 +14,16 @@ struct OCRButton: View {
     var body: some View {
         if(!ocrTask.isRunning){
             Button(
-                action: {
-                    ocrTask.locked = true
-                    let pdfSourceUrl = self.selectPDF()
-                    Task{
-                        withAnimation {
-                            ocrTask.isRunning = true
-                        }
-                        await ocrTask.runOcr(pdfSourceUrl: pdfSourceUrl)
-                        //ocrTask.output=shellOutput
-                        //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
-                        
-                        withAnimation {
-                            ocrTask.isRunning = false
-                            ocrTask.locked = false
-                        }
-                    }
-            },
+                action: {ocrTask.selectFileAndRunOcrTask()},
                 label: {
                     Text("Select and OCR my PDF")
                 }
-            
             )
             .buttonStyle(.borderedProminent)
-            //.buttonStyle(FancyOCRButtonStyle())
             .clipShape(Capsule())
             .controlSize(.large)
             .shadow(radius: 10)
-            .disabled(ocrTask.locked)
+            .disabled(ocrTask.lockedSettings)
             .frame(height: 50)
             .transition(.asymmetric(insertion: AnyTransition.scale(scale: 0.05), removal: AnyTransition.scale(scale: 0.05)))
             .animation(.easeIn(duration: 0.5), value: ocrTask.isRunning)
@@ -55,32 +37,10 @@ struct OCRButton: View {
         }
     }
     
-    private func selectPDF () -> (URL?) {
-        let panel = NSOpenPanel()
-        panel.allowedContentTypes = [.pdf]
-        panel.allowsMultipleSelection = false
-        panel.canChooseDirectories = false
-        return panel.runModal() == .OK ? panel.urls.first : nil
-    }
+    
     
     
 }
-
-//struct FancyOCRButtonStyle: ButtonStyle {
-//    @Environment(\.isEnabled) var isEnabled
-//    let runningCircle = RunningCircle()
-//    var size : CGSize = CGSize()
-//    func makeBody(configuration: Configuration) -> some View {
-//
-//        configuration.label
-//            .padding()
-//            .background(isEnabled ? .blue : .gray)
-//            .foregroundColor(.white)
-//            .clipShape(Capsule())
-//            .shadow(radius: 10)
-//
-//    }
-//}
 
 struct OCRButton_Previews: PreviewProvider {
     @StateObject static var ocrTaskState = OCRTask()

@@ -6,10 +6,18 @@
          contextName = "closure #1 in closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
+         contextName = "closure #2 in ContentView.body.getter:ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "providers.first">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "Shell._execute(command:arguments:):Shell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
       </ContextState>
       <ContextState
          contextName = "ContentView.runTerminalCommand(command:with:):ContentView.swift">

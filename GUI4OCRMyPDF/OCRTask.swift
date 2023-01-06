@@ -7,12 +7,13 @@
 
 import SwiftUI
 import DequeModule
+import UniformTypeIdentifiers
 
 @MainActor
-class OCRTask: ObservableObject {
+class OCRTask: ObservableObject, DropDelegate {
     
     @Published var isRunning = false
-    @Published var locked = false
+    @Published var lockedSettings = false
     
     @AppStorage("outputPDFA") var outputPDFA = true
     @AppStorage("inPlace") var inPlace = false
@@ -24,6 +25,37 @@ class OCRTask: ObservableObject {
     
     var processedPdfs: Deque<URL> = []
     
+    func selectFileAndRunOcrTask() {
+        lockedSettings = true
+        let pdfSourceUrl = self.selectPDF()
+        Task {
+            withAnimation {
+                isRunning = true
+            }
+            await runOcr(pdfSourceUrl: pdfSourceUrl)
+            //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+            
+            withAnimation {
+                isRunning = false
+                lockedSettings = false
+            }
+        }
+    }
+    
+    private func runOcrTask(withDropedPdfSource: URL?) {
+        Task {
+            withAnimation {
+                isRunning = true
+            }
+            await runOcr(pdfSourceUrl: withDropedPdfSource)
+            //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+            
+            withAnimation {
+                isRunning = false
+                lockedSettings = false
+            }
+        }
+    }
     
     func runOcr(pdfSourceUrl: URL?) async -> Void {
         guard pdfSourceUrl != nil else {
@@ -33,23 +65,23 @@ class OCRTask: ObservableObject {
         let shell = Shell()
         shell.$output.receive(on: DispatchQueue.main).assign(to: &$output)
         
-//        let shell = Shell(outputHandler: { pipe in
-//            if let pipeDataAsString = String(data: pipe.availableData, encoding: .utf8) {
-//                if !pipeDataAsString.isEmpty {
-//                    DispatchQueue.main.async {
-//
-//                        //self.output.append(contentsOf: " " + pipeDataAsString)
-//
-//                        self.output += pipeDataAsString
-//
-//                    }
-//
-//                    print("----> ouput: \(pipeDataAsString)")
-//                }
-//            } else {
-//                print("Error decoding data: \(pipe.availableData)")
-//            }
-//        })
+        //        let shell = Shell(outputHandler: { pipe in
+        //            if let pipeDataAsString = String(data: pipe.availableData, encoding: .utf8) {
+        //                if !pipeDataAsString.isEmpty {
+        //                    DispatchQueue.main.async {
+        //
+        //                        //self.output.append(contentsOf: " " + pipeDataAsString)
+        //
+        //                        self.output += pipeDataAsString
+        //
+        //                    }
+        //
+        //                    print("----> ouput: \(pipeDataAsString)")
+        //                }
+        //            } else {
+        //                print("Error decoding data: \(pipe.availableData)")
+        //            }
+        //        })
         
         do {
             try await shell.executeOCR(ocrArgs: optionsToShellArgs(pdfSourceUrl: pdfSourceUrl))
@@ -60,10 +92,10 @@ class OCRTask: ObservableObject {
         } catch {
             print(error)
         }
-    
+        
     }
     
-    func optionsToShellArgs(pdfSourceUrl: URL?) -> [String] {
+    private func optionsToShellArgs(pdfSourceUrl: URL?) -> [String] {
         var args : [String] = []
         
         guard let sourceUrl = pdfSourceUrl else {
@@ -86,18 +118,17 @@ class OCRTask: ObservableObject {
             args.append("--rotate-pages")
         }
         
-            
+        
         let targetUrl = targetUrl(sourceUrl: sourceUrl, inPlace: inPlace)
         
         args.append("'\(sourceUrl.path(percentEncoded: false))'")
         args.append("'\(targetUrl.path(percentEncoded: false))'")
         
         
-        
         return args
     }
     
-    func targetUrl(sourceUrl: URL, inPlace: Bool) -> URL {
+    private func targetUrl(sourceUrl: URL, inPlace: Bool) -> URL {
         var targetUrl = sourceUrl//URL(from: sourceUrl)//URL(string: sourceUrl.path(percentEncoded:true))!
         if (!inPlace) {
             let sourceExtension = sourceUrl.pathExtension
@@ -105,5 +136,40 @@ class OCRTask: ObservableObject {
             targetUrl = sourceUrl.deletingPathExtension().deletingLastPathComponent().appending(path: sourceName+" ocr").appendingPathExtension(sourceExtension)
         }
         return targetUrl
+    }
+    
+    private func selectPDF () -> (URL?) {
+        let panel = NSOpenPanel()
+        panel.allowedContentTypes = [.pdf]
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+        return panel.runModal() == .OK ? panel.urls.first : nil
+    }
+    
+    func performDrop(info dropInfo: DropInfo) -> Bool {
+        guard dropInfo.hasItemsConforming(to: [UTType.pdf]) else {
+            return false
+        }
+        
+        let items = dropInfo.itemProviders(for: [UTType.pdf])
+        //        _ = items.first?.loadInPlaceFileRepresentation(forTypeIdentifier: UTType.pdf.identifier, completionHandler: { url,success,error  in
+        //            print(url!)
+        //        })
+        _ = items.first?.loadFileRepresentation(for: UTType.pdf, openInPlace: true) { [self] withDropedPdfSource,success,error in
+            Task { @MainActor in
+                withAnimation {
+                    isRunning = true
+                }
+                await runOcr(pdfSourceUrl: withDropedPdfSource)
+                //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+                
+                withAnimation {
+                    isRunning = false
+                    lockedSettings = false
+                }
+            }
+        }
+        
+        return true
     }
 }

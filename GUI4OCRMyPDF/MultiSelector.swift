@@ -82,11 +82,5 @@ struct MultiSelector_Previews: PreviewProvider {
             selected: $selected
         )
         
-        ContentView()
-            .environment(\.sizeCategory, .medium)
-            .previewInterfaceOrientation(.landscapeLeft)
-            .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: 360))
-            .previewDisplayName("App")
-        
     }
 }
