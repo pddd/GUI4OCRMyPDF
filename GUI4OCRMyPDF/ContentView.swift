@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 struct ContentView: View {
-
+    
     @ObservedObject var ocrTask: OCRTask
     @State private var taskOutput = ""
     @State private var expandedResult = false
@@ -21,26 +21,26 @@ struct ContentView: View {
     var body: some View {
         
         VStack(alignment: .center) {
-    
+            
             
             OCRButton(ocrTask: ocrTask)
             
             GroupBox(label:
-                Label("OCR Settings", systemImage: settingsIcon)
+                        Label("OCR Settings", systemImage: settingsIcon)
             ) {
                 GeneralSettingsView()
             }.disabled(ocrTask.lockedSettings)
             
             DisclosureGroup("Output", isExpanded: $expandedResult) {
                 ScrollViewReader { scrollView in
-                   ScrollView {
+                    ScrollView {
                         Text(ocrTask.output).id("Result Text")
                             .onReceive(ocrTask.$output) { output in
                                 //taskOutput = output
                                 withAnimation{
                                     scrollView.scrollTo("Result Text",anchor: UnitPoint.bottom)
                                 }
-                        }
+                            }
                     }
                 }.frame(minHeight: 50.0, maxHeight: 100.0)
                 if (ocrTask.processedPdfs.count>0 && !ocrTask.isRunning) {
@@ -63,7 +63,7 @@ struct ContentView: View {
         .frame(alignment: .top)
     }
 }
-                         
+
 
 struct ContentView_Previews: PreviewProvider {
     @StateObject static var ocrTask = OCRTask()
@@ -78,7 +78,7 @@ struct ContentView_Previews: PreviewProvider {
             .previewInterfaceOrientation(.landscapeLeft)
             .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: 460))
             .previewDisplayName("App")
-            
+        
         
     }
 }

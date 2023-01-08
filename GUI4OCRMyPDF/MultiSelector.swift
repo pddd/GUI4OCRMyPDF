@@ -44,7 +44,7 @@ struct MultiSelector: View {
             .buttonStyle(FancyButtonStyle())
         }
     }
-
+    
     private func multiSelectionView() -> some View {
         MultiSelectionView(
             options: options,
@@ -70,9 +70,9 @@ struct FancyButtonStyle: ButtonStyle {
 }
 
 struct MultiSelector_Previews: PreviewProvider {
-
+    
     @State static var selected = ["eng","pol","deu","nld"]
-
+    
     static var previews: some View {
         
         MultiSelector(

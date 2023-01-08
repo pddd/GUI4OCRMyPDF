@@ -11,6 +11,7 @@ import UniformTypeIdentifiers
 
 @MainActor
 class OCRTask: ObservableObject, DropDelegate {
+    var testMode = false
     
     @Published var isRunning = false
     @Published var lockedSettings = false
@@ -23,11 +24,18 @@ class OCRTask: ObservableObject, DropDelegate {
     
     @Published var output : String = ""
     
+    init(activateTestMode: Bool = false) {
+        self.testMode = activateTestMode
+    }
+    
     var processedPdfs: Deque<URL> = []
     
     func selectFileAndRunOcrTask() {
         lockedSettings = true
-        let pdfSourceUrl = self.selectPDF()
+        var pdfSourceUrl: URL? = nil
+        if (!self.testMode) {
+            pdfSourceUrl = self.selectPDF()
+        }
         runOcrTask(withPdfSource: pdfSourceUrl)
     }
     
@@ -37,8 +45,12 @@ class OCRTask: ObservableObject, DropDelegate {
                 lockedSettings = true
                 isRunning = true
             }
-            await runOcr(pdfSourceUrl: withPdfSource)
-            //try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+            
+            if (!self.testMode) {
+                await runOcr(pdfSourceUrl: withPdfSource)
+            } else {
+                try await Task.sleep(until: .now + .seconds(3), clock: .continuous)
+            }
             
             withAnimation {
                 isRunning = false

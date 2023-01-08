@@ -22,11 +22,11 @@ struct RunningCircle: View {
                 }
             }
         //Same effect as above, but less understandable for me
-//            .rotationEffect(Angle(degrees: rotate ? 360 : 0))
-//            .animation(Animation.default.repeatForever(autoreverses: false), value: rotate)
-//            .onAppear() {
-//                self.rotate = true
-//            }
+        //            .rotationEffect(Angle(degrees: rotate ? 360 : 0))
+        //            .animation(Animation.default.repeatForever(autoreverses: false), value: rotate)
+        //            .onAppear() {
+        //                self.rotate = true
+        //            }
     }
 }
 
@@ -34,7 +34,7 @@ struct RunningCircle_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             RunningCircle()
-                
+            
         }.padding()
             .frame(height: 50)
         

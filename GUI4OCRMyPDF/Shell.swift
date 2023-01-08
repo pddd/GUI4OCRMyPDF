@@ -30,7 +30,7 @@ class Shell: ObservableObject {
         environment["PATH"] = _environmentPath.colonJoinedEnvironmentPath
         print(environment["PATH"] ?? "No Path")
         self.output += "PATH = \(environment["PATH"] ?? "") \n"
-
+        
         process.environment = environment
         
         process.standardOutput = pipe

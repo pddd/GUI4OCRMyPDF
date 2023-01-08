@@ -11,34 +11,34 @@ struct SettingsView: View {
     private let settingsIcon = "gearshape.fill"
     
     private enum Tabs: Hashable {
-            case general, advanced
+        case general, advanced
+    }
+    var body: some View {
+        TabView {
+            GeneralSettingsView()
+                .tabItem {
+                    Label("OCR Settings", systemImage: settingsIcon)
+                }
+                .tag(Tabs.general)
+            //                AdvancedSettingsView()
+            //                    .tabItem {
+            //                        Label("Advanced", systemImage: "star")
+            //                    }
+            //                    .tag(Tabs.advanced)
         }
-        var body: some View {
-            TabView {
-                GeneralSettingsView()
-                    .tabItem {
-                        Label("OCR Settings", systemImage: settingsIcon)
-                    }
-                    .tag(Tabs.general)
-//                AdvancedSettingsView()
-//                    .tabItem {
-//                        Label("Advanced", systemImage: "star")
-//                    }
-//                    .tag(Tabs.advanced)
-            }
-            .padding(20)
-            .frame(width: 375, height: 250)
-        }
+        .padding(20)
+        .frame(width: 375, height: 250)
+    }
 }
 
 struct GeneralSettingsView: View {
-
+    
     @AppStorage("outputPDFA") var outputPDFA = true
     @AppStorage("inPlace") var inPlace = false
     @AppStorage("correctPageRotation") var correctPageRotation = true
     @AppStorage("redoOCR") var redoOCR = true
     @AppStorage("OCRLanguageOptions") var oOCRLanguageOptions = OCRLanguageOptions()
-
+    
     var body: some View {
         VStack{
             Form() {

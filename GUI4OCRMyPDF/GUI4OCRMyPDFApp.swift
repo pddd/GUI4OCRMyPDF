@@ -10,7 +10,7 @@ import UniformTypeIdentifiers
 
 @main
 struct GUI4OCRMyPDFApp: App {
-    @StateObject private var ocrTask = OCRTask()
+    @StateObject private var ocrTask = OCRTask(activateTestMode:false)
     
     var body: some Scene {
         WindowGroup {
@@ -18,16 +18,16 @@ struct GUI4OCRMyPDFApp: App {
                 Header()
                 ContentView(ocrTask: ocrTask)
             }
-            .frame(minWidth: 410, idealWidth: 450, maxWidth: .infinity, minHeight: 530, idealHeight: 550, maxHeight: .infinity, alignment: .top)
+            .frame(minWidth: 410, idealWidth: 450, maxWidth: .infinity, minHeight: 550, idealHeight: 550, maxHeight: .infinity, alignment: .top)
             .onDrop(of: [UTType.pdf], delegate: ocrTask)
             .onOpenURL(perform: {dropedPdf in ocrTask.runOcrTask(withPdfSource: dropedPdf)})
         }
         
-        #if os(macOS)
+#if os(macOS)
         Settings {
             SettingsView()
         }
-        #endif
+#endif
     }
 }
 
