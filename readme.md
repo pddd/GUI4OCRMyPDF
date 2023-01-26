@@ -12,6 +12,6 @@ But ocr my pdf has only a cli interface. So I created a simple Swift GUI to help
 * Passing the shell output to the SwiftUI text control was a challenge, but was implemented well.
 * I'm not quite sure yet if and how to use the existing ButtonStyles
 
-Screenshots
+## Screenshots
 
 ![HelpMeOcrMyPDF](Screenshots/HelpMeOcrMyPDF.png)
