@@ -11,18 +11,6 @@ import UniformTypeIdentifiers
 @main
 struct GUI4OCRMyPDFApp: App {
     @StateObject private var ocrTask = OCRTask(activateTestMode:false)
-
-    init() {
-        let preferredLanguage = Locale.preferredLanguages.first?.prefix(2).lowercased() ?? "en"
-        let supportedLanguages = ["en", "de"]
-
-        if supportedLanguages.contains(preferredLanguage) {
-            UserDefaults.standard.set([preferredLanguage], forKey: "AppleLanguages")
-        } else {
-            UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
-        }
-        UserDefaults.standard.synchronize()
-    }
     
     var body: some Scene {
         WindowGroup {
