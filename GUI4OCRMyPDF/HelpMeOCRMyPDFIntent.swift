@@ -7,7 +7,6 @@
 
 import AppIntents
 import SwiftUI
-import GUI4OCRMyPDF
 
 struct HelpMeOCRMyPDFIntent: AppIntent {
     static var title: LocalizedStringResource = "Help me ocr my PDF"
@@ -20,7 +19,7 @@ struct HelpMeOCRMyPDFIntent: AppIntent {
     var sourcePDF: URL
     
     func perform() async throws -> some IntentResult {
-        await ocrTask.runOcrTask(withPdfSource: sourcePDF)
+        await ocrTask.runOcr(pdfSourceUrl: sourcePDF)
         return .result()
     }
 }

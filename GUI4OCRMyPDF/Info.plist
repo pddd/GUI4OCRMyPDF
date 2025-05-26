@@ -15,5 +15,13 @@
 			</array>
 		</dict>
 	</array>
+	<key>INIntentsSupported</key>
+	<array>
+		<string>HelpMeOCRMyPDFIntent</string>
+	</array>
+	<key>NSServices</key>
+	<array>
+		<dict/>
+	</array>
 </dict>
 </plist>

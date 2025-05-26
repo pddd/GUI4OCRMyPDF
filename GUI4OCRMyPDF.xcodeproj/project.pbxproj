@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A517063629645B3C004FF552 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517063529645B3C004FF552 /* SettingsView.swift */; };
+		A58DD1F7298FF6170009445F /* HelpMeOCRMyPDFIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5990E6E298FAEEC00A7FD1E /* HelpMeOCRMyPDFIntent.swift */; };
 		A5AAB2FE2961A0BC00248F77 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB2FD2961A0BC00248F77 /* Header.swift */; };
 		A5AAB3002961A8C600248F77 /* RunningCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB2FF2961A8C600248F77 /* RunningCircle.swift */; };
 		A5AAB3022961C1EE00248F77 /* OCRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAB3012961C1EE00248F77 /* OCRButton.swift */; };
@@ -19,7 +20,6 @@
 		A5AD95DC2949E7680066D90A /* GUI4OCRMyPDFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95DB2949E7680066D90A /* GUI4OCRMyPDFUITests.swift */; };
 		A5AD95DE2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD95DD2949E7680066D90A /* GUI4OCRMyPDFUITestsLaunchTests.swift */; };
 		A5C0657129659C090066ACE5 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657029659C090066ACE5 /* Collections */; };
-		A5C0657329659C090066ACE5 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657229659C090066ACE5 /* DequeModule */; };
 		A5C0657529659C090066ACE5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = A5C0657429659C090066ACE5 /* OrderedCollections */; };
 		A5C5B239294E07C6005F0FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C5B238294E07C6005F0FD7 /* Assets.xcassets */; };
 		A5C5B23E294FB622005F0FD7 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B23D294FB622005F0FD7 /* Shell.swift */; };
@@ -46,6 +46,19 @@
 			remoteInfo = GUI4OCRMyPDF;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5990E75298FAEEC00A7FD1E /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A517063529645B3C004FF552 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -85,7 +98,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C0657129659C090066ACE5 /* Collections in Frameworks */,
-				A5C0657329659C090066ACE5 /* DequeModule in Frameworks */,
 				A5C0657529659C090066ACE5 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +171,7 @@
 				A5AAB3012961C1EE00248F77 /* OCRButton.swift */,
 				A5AAB30329622BBE00248F77 /* OCRTask.swift */,
 				A517063529645B3C004FF552 /* SettingsView.swift */,
+				A5990E6E298FAEEC00A7FD1E /* HelpMeOCRMyPDFIntent.swift */,
 			);
 			path = GUI4OCRMyPDF;
 			sourceTree = "<group>";
@@ -198,6 +211,7 @@
 				A5AD95B82949E7670066D90A /* Sources */,
 				A5AD95B92949E7670066D90A /* Frameworks */,
 				A5AD95BA2949E7670066D90A /* Resources */,
+				A5990E75298FAEEC00A7FD1E /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
@@ -206,7 +220,6 @@
 			name = GUI4OCRMyPDF;
 			packageProductDependencies = (
 				A5C0657029659C090066ACE5 /* Collections */,
-				A5C0657229659C090066ACE5 /* DequeModule */,
 				A5C0657429659C090066ACE5 /* OrderedCollections */,
 			);
 			productName = GUI4OCRMyPDF;
@@ -334,6 +347,7 @@
 				A5AD95C22949E7670066D90A /* ContentView.swift in Sources */,
 				A5AAB2FE2961A0BC00248F77 /* Header.swift in Sources */,
 				A5AAB30429622BBE00248F77 /* OCRTask.swift in Sources */,
+				A58DD1F7298FF6170009445F /* HelpMeOCRMyPDFIntent.swift in Sources */,
 				A5AAB3022961C1EE00248F77 /* OCRButton.swift in Sources */,
 				A5AD95C02949E7670066D90A /* GUI4OCRMyPDFApp.swift in Sources */,
 				A5C5B24E29545DC4005F0FD7 /* MultiSelectionView.swift in Sources */,
@@ -740,11 +754,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
 			productName = Collections;
-		};
-		A5C0657229659C090066ACE5 /* DequeModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A5C0656F29659C090066ACE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = DequeModule;
 		};
 		A5C0657429659C090066ACE5 /* OrderedCollections */ = {
 			isa = XCSwiftPackageProductDependency;
