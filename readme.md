@@ -1,4 +1,4 @@
-#  SwiftGUI4OCRmyPDF
+#  (Swift) GUI4OCRmyPDF
 
 This is a side project to learn swiftui.
 
